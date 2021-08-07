@@ -162,7 +162,7 @@ langs = ' . $json->encode($langs) . ';
 
 		<div class="top_right">
 			<div class="right_title">
-			Online Customer Service System
+			Customer Service System
 			</div>
 			<div class="right_content scroll">
 			Welcome to the online customer service system! <br/>Any questions you may have will be answered and any suggestions you may have will be heard!!!
