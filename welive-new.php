@@ -162,10 +162,10 @@ langs = ' . $json->encode($langs) . ';
 
 		<div class="top_right">
 			<div class="right_title">
-			自定义内容标题
+			Online Customer Service System
 			</div>
 			<div class="right_content scroll">
-			在这里添加自定义内容<br><br><font color=red>注：</font>编辑WeLive根目录下的<br>welive-new.php文件，可修改自定义标题及内容
+			Welcome to the online customer service system! <br/>Any questions you may have will be answered and any suggestions you may have will be heard!!!
 			</div>
 		</div>
 
