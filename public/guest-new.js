@@ -325,7 +325,7 @@ function welive_parseOut(get){
 						}
 
 						historier.children(".robot_typing").remove(); //清除机器人思考标志
-
+						d = d.replace(/\&lt;br\/\&gt;/g, "<br/>");
 						welive_output(d, type); //输出
 
 					}, 800); //信息延迟显示
@@ -333,7 +333,7 @@ function welive_parseOut(get){
 					return;
 				}
 			}else{ //自己发出的对话
-				type = 2; d = welive.msg.replace(/</g, "&lt;").replace(/>/g, "&gt;"); //防止自己发js代码时发生显示错误
+				type = 2; d = welive.msg.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\&lt;br\/\&gt;/g, "<br/>"); //防止自己发js代码时发生显示错误
 				if(!welive.is_robot) welive.status = 1; //发送完成允许发送第二条信息
 				sender.removeClass('loading2');
 			}
