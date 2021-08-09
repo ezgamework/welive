@@ -191,6 +191,8 @@ function format_output(data) {
 	data = data.replace(/((((https?|ftp):\/\/)|www\.)([\w\-]+\.)+[\w\.\/=\?%\-&~\':+!#;]*)/ig, function($1){return getURL($1);});
 	//将表情代码换成图标路径
 	data = data.replace(/\[:(\d*):\]/g, '<img src="' + SYSDIR + 'public/smilies/$1.png">').replace(/\\/g, '');
+	//换行
+	data = data.replace(/\&lt;br\/\&gt;/g, "<br/>");
 	return data;
 }
 
