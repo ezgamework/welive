@@ -171,13 +171,16 @@ function show_alert(info, time) {
 
 //格式化输出信息
 function format_output(data) {
+	console.log('1-' + data);
 	data = data.replace(/\\n/g, "<br/>");
+	console.log('2-' + data);
 	//生成URL链接
 	data = data.replace(/((((https?|ftp):\/\/)|www\.)([\w\-]+\.)+[\w\.\/=\?%\-&~\':+!#;]*)/ig, function($1){return getURL($1);});
 	//将表情代码换成图标路径
 	data = data.replace(/\[:(\d*):\]/g, '<img src="' + SYSDIR + 'public/smilies/$1.png">').replace(/\\/g, '');
 	//换行
 	data = data.replace(/\&lt;br\/\&gt;/g, "<br/>");
+	console.log('3-' + data);
 	return data;
 }
 
@@ -362,11 +365,10 @@ function welive_parseOut(get){
 								var rec_i = file_arr[1] + "<br>... " + langs.upload_done;
 							}
 						}else{
+							console.log('0-' + rec.m);
 							var rec_i = format_output(rec.m);
 						}
-						console.log(rec);
-						rec_i = rec_i.replace(/\\n/g, "<br/>");
-						console.log(rec_i);
+
 						if(rec.t == 1){ //客服的
 							if(rec.fid == guest.aid){
 								var welive_duty_i = welive_duty;
