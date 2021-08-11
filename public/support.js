@@ -485,7 +485,7 @@ function showNext(hide) {
 
 //格式化输出信息
 function format_output(data) {
-	data.replace(/\\/g, "<br/>");
+	data = data.replace(/\\/g, "<br/>");
 
 	//生成URL链接
 	data = data.replace(/((((https?|ftp):\/\/)|www\.)([\w\-]+\.)+[\w\.\/=\?%\-&~\':+!#;]*)/ig, function($1){return getURL($1);});
