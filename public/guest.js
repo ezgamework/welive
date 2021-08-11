@@ -375,7 +375,6 @@ function welive_parseOut(get){
 								var rec_i = file_arr[1] + "<br>... " + langs.upload_done;
 							}
 						}else{
-							console.log('0-' + rec.m);
 							var rec_i = format_output(rec.m);
 						}
 
