@@ -485,6 +485,8 @@ function showNext(hide) {
 
 //格式化输出信息
 function format_output(data) {
+	console.log(data);
+	console.log(data);
 	//生成URL链接
 	data = data.replace(/((((https?|ftp):\/\/)|www\.)([\w\-]+\.)+[\w\.\/=\?%\-&~\':+!#;]*)/ig, function($1){return getURL($1);});
 	//将表情代码换成图标路径
