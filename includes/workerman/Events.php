@@ -96,7 +96,7 @@ class Events
 		// 将json数据转换为对象
         $data = json_decode($data);
 
-        $data->msg = str_replace('\n', '<br/>', $data->msg);
+        $data->msg = str_replace('\n', '&lt;br/&gt;', $data->msg);
 
         switch($data->type)
         {
