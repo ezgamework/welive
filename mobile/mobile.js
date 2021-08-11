@@ -364,8 +364,9 @@ function welive_parseOut(get){
 						}else{
 							var rec_i = format_output(rec.m);
 						}
-
+						console.log(rec);
 						rec_i = rec_i.replace(/\\n/g, "<br/>");
+						console.log(rec_i);
 						if(rec.t == 1){ //客服的
 							if(rec.fid == guest.aid){
 								var welive_duty_i = welive_duty;
