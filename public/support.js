@@ -483,9 +483,11 @@ function showNext(hide) {
 	}
 }
 
-//格式化输出信息
+//格式化输出信息  客服端消息显示 当前 & 历史
 function format_output(data) {
 	data = data.replace(/\\n/g, "<br/>");
+	data = data.replace(/\r\n/g,"<br>");
+	data = data.replace(/\n/g,"<br>");
 
 	//生成URL链接
 	data = data.replace(/((((https?|ftp):\/\/)|www\.)([\w\-]+\.)+[\w\.\/=\?%\-&~\':+!#;]*)/ig, function($1){return getURL($1);});
