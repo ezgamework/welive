@@ -397,8 +397,9 @@ return " . var_export($team_settings, true) . ";
 
 	//去掉空白及换行函数
 	private function Clear_string_for_js($str) 
-	{ 
-		$str = str_replace(PHP_EOL, '', $str); //去掉换行符, 兼容JS变量调用
+	{
+		$str = str_replace(PHP_EOL, '<br/>', $str); //去掉换行符, 兼容JS变量调用
+
 		$str = preg_replace("/\t/", '', $str); //使用正则表达式替换内容，如：换行
 		$str = preg_replace("/\r\n/", '', $str); 
 		$str = preg_replace("/\r/", '', $str); 
