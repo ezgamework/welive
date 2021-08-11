@@ -124,7 +124,7 @@ class Events
 
             case 'msg': //消息
 
-				$msg = str_replace(PHP_EOL, '&lt;br/&gt;', $data->msg);
+				$msg = str_replace(PHP_EOL, '<br/>', $data->msg);
 
 				//超过 2k 字节
 				if(strlen($msg) > 2048) $msg = "... too long ..."; 
