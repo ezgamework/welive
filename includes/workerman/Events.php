@@ -96,8 +96,6 @@ class Events
 		// 将json数据转换为对象
         $data = json_decode($data);
 
-        $data->msg = str_replace('\n', '&lt;br/&gt;', $data->msg);
-
         switch($data->type)
         {
             case 'ping': //心跳
@@ -126,7 +124,7 @@ class Events
 
             case 'msg': //消息
 
-				$msg = $data->msg;
+				$msg = str_replace(PHP_EOL, '&lt;br/&gt;', $data->msg);
 
 				//超过 2k 字节
 				if(strlen($msg) > 2048) $msg = "... too long ..."; 
